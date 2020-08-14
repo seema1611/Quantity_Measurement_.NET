@@ -219,5 +219,16 @@ namespace QuantityMeasurementProblemTest
             double value2 = this.quantityMeasurement2.GetValueAndUnit(1.0, UnitType.Units.YARD);
             Assert.AreNotEqual(value1, value2);
         }
+
+        /// <summary>
+        /// Test 1.16: check equality for values of 1 Yard & 36 Inch.
+        /// </summary>
+        [Test]
+        public void GivenOneYardAndThirtySixInchValueCheck_WhenEqual_ShouldReturnEqual()
+        {
+            double value1 = this.quantityMeasurement2.GetValueAndUnit(1.0, UnitType.Units.YARD);
+            double value2 = this.quantityMeasurement.GetValueAndUnit(36.0, UnitType.Units.INCH);
+            Assert.AreEqual(value1, value2);
+        }
     }
 }
