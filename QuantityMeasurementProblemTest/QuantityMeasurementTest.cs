@@ -307,5 +307,16 @@ namespace QuantityMeasurementProblemTest
             double valueTwo = this.quantityMeasurement2.GetValueAndUnit(2.5, UnitType.Units.CM);
             Assert.AreEqual(valueOne + valueTwo, 3);
         }
+
+        /// <summary>
+        /// Test 1.1: Check 1 gallon abd 3.78 litres equal.
+        /// </summary>
+        [Test]
+        public void GivenOneGallonAndThreeptSevenEightLiters_WhenSame_ShouldReturnEqual()
+        {
+            double valueOne = this.quantityMeasurement.GetValueAndUnit(1.0, UnitType.Units.GALLON);
+            double valueTwo = this.quantityMeasurement.GetValueAndUnit(3.78, UnitType.Units.LITRE);
+            Assert.AreEqual(valueOne, valueTwo);
+        }
     }
 }

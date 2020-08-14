@@ -14,7 +14,7 @@ namespace QuantityMeasurementProblem
         /// </summary>
         public enum Units
         {
-            FEET,INCH,YARD,CM
+            FEET,INCH,YARD,CM, GALLON,LITRE,ML,
         }
 
         /// <summary>
@@ -42,6 +42,21 @@ namespace QuantityMeasurementProblem
             if (unitsType == Units.CM)
             {
                 return 1 / 2.5;
+            }
+
+            if (unitsType == Units.LITRE)
+            {
+                return 1 * 1000.0;
+            }
+
+            if (unitsType == Units.GALLON)
+            {
+                return 1 * 3780.0;
+            }
+
+            if (unitsType == Units.ML)
+            {
+                return 1.0;
             }
 
             return 0.0;
