@@ -296,5 +296,16 @@ namespace QuantityMeasurementProblemTest
             double valueTwo = this.quantityMeasurement2.GetValueAndUnit(1.0, UnitType.Units.FEET);
             Assert.AreEqual(valueOne + valueTwo, 24);
         }
+
+        /// <summary>
+        /// Test 4.4: Addition of 2 Inch & 2.5 Cm values.
+        /// </summary>
+        [Test]
+        public void GivenTwoInchAndTwoptFiveCm_WhenAdded_ShouldReturnCorrectResult()
+        {
+            double valueOne = this.quantityMeasurement2.GetValueAndUnit(2.0, UnitType.Units.INCH);
+            double valueTwo = this.quantityMeasurement2.GetValueAndUnit(2.5, UnitType.Units.CM);
+            Assert.AreEqual(valueOne + valueTwo, 3);
+        }
     }
 }
