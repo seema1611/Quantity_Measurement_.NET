@@ -47,5 +47,17 @@ namespace QuantityMeasurementProblemTest
         {
             Assert.IsFalse(this.quantityMeasurement.Equals(null));
         }
+
+        /// <summary>
+        /// Test 1.3: check equality for reference.
+        /// </summary>
+        [Test]
+        public void GivenTwoReferenceObject_WhenEqual_ShouldReturnTrue()
+        {
+            double value1 = this.quantityMeasurement.GetValueAndUnit(0.0, UnitType.Units.FEET);
+            double value2 = this.quantityMeasurement2.GetValueAndUnit(0.0, UnitType.Units.FEET);
+            bool data = value1.Equals(value2);
+            Assert.IsTrue(data);
+        }
     }
 }
