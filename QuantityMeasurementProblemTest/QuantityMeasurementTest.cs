@@ -142,5 +142,16 @@ namespace QuantityMeasurementProblemTest
             double value2 = this.quantityMeasurement2.GetValueAndUnit(0.0, UnitType.Units.INCH);
             Assert.AreEqual(value1, value2);
         }
+
+        /// <summary>
+        /// Test 1.13: check equality for values of Feet & Inch.
+        /// </summary>
+        [Test]
+        public void GivenOneFeetAndOneInchValueCheck_WhenNotEqual_ShouldReturnNotEqual()
+        {
+            double value1 = this.quantityMeasurement.GetValueAndUnit(1.0, UnitType.Units.FEET);
+            double value2 = this.quantityMeasurement2.GetValueAndUnit(1.0, UnitType.Units.INCH);
+            Assert.AreNotEqual(value1, value2);
+        }
     }
 }
