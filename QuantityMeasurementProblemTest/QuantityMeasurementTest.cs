@@ -120,5 +120,16 @@ namespace QuantityMeasurementProblemTest
         {
             Assert.AreEqual(this.quantityMeasurement, this.quantityMeasurement2);
         }
+
+        /// <summary>
+        /// Test 1.10: check equality for value check in Inch.
+        /// </summary>
+        [Test]
+        public void GivenTwoSameInchValue_WhenEqual_ShouldReturnEqual()
+        {
+            double value1 = this.quantityMeasurement.GetValueAndUnit(5.0, UnitType.Units.INCH);
+            double value2 = this.quantityMeasurement.GetValueAndUnit(5.0, UnitType.Units.INCH);
+            Assert.AreEqual(value1, value2);
+        }
     }
 }
