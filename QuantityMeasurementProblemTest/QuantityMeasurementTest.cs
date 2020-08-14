@@ -59,5 +59,14 @@ namespace QuantityMeasurementProblemTest
             bool data = value1.Equals(value2);
             Assert.IsTrue(data);
         }
+
+        /// <summary>
+        /// Test 1.4: check equality for type.
+        /// </summary>
+        [Test]
+        public void GivenTwoTypeObject_WhenEqual_ShouldReturnEqual()
+        {
+            Assert.AreEqual(this.quantityMeasurement, this.quantityMeasurement2);
+        }
     }
 }
