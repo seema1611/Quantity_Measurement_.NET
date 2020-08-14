@@ -68,5 +68,16 @@ namespace QuantityMeasurementProblemTest
         {
             Assert.AreEqual(this.quantityMeasurement, this.quantityMeasurement2);
         }
+
+        /// <summary>
+        /// Test 1.5: check equality for Feet value check.
+        /// </summary>
+        [Test]
+        public void GivenTwoSameValueCheck_WhenEqual_ShouldReturnEqual()
+        {
+            double value1 = this.quantityMeasurement.GetValueAndUnit(5.0, UnitType.Units.FEET);
+            double value2 = this.quantityMeasurement.GetValueAndUnit(5.0, UnitType.Units.FEET);
+            Assert.AreEqual(value1, value2);
+        }
     }
 }
