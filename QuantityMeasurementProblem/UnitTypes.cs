@@ -16,6 +16,7 @@ namespace QuantityMeasurementProblem
         {
             FEET,
             INCH,
+            YARD,
         }
 
         /// <summary>
@@ -33,6 +34,11 @@ namespace QuantityMeasurementProblem
             if (unitsType == Units.INCH)
             {
                 return 1.0;
+            }
+
+            if (unitsType == Units.YARD)
+            {
+                return 36.0;
             }
 
             return 0.0;
