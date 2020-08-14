@@ -252,5 +252,16 @@ namespace QuantityMeasurementProblemTest
             double value2 = this.quantityMeasurement.GetValueAndUnit(3.0, UnitType.Units.FEET);
             Assert.AreEqual(value1, value2);
         }
+
+        /// <summary>
+        /// Test 1.17: check equality for values of Two inch to five centimeter.
+        /// </summary>
+        [Test]
+        public void GivenTwoInchAndFiveCMValueCheck_WhenEqual_ShouldReturnEqual()
+        {
+            double value1 = this.quantityMeasurement2.GetValueAndUnit(2.0, UnitType.Units.INCH);
+            double value2 = this.quantityMeasurement2.GetValueAndUnit(5.0, UnitType.Units.CM);
+            Assert.AreEqual(value1, value2);
+        }
     }
 }

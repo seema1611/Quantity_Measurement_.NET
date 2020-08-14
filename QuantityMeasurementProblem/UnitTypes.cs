@@ -14,9 +14,7 @@ namespace QuantityMeasurementProblem
         /// </summary>
         public enum Units
         {
-            FEET,
-            INCH,
-            YARD,
+            FEET,INCH,YARD,CM
         }
 
         /// <summary>
@@ -39,6 +37,11 @@ namespace QuantityMeasurementProblem
             if (unitsType == Units.YARD)
             {
                 return 36.0;
+            }
+
+            if (unitsType == Units.CM)
+            {
+                return 1 / 2.5;
             }
 
             return 0.0;
