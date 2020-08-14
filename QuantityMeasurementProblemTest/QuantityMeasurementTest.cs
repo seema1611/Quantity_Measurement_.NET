@@ -79,5 +79,16 @@ namespace QuantityMeasurementProblemTest
             double value2 = this.quantityMeasurement.GetValueAndUnit(5.0, UnitType.Units.FEET);
             Assert.AreEqual(value1, value2);
         }
+
+        /// <summary>
+        /// Test 1.6: check two 0 inch values.
+        /// </summary>
+        [Test]
+        public void GivenZeroInchAndZeroInch_WhenSame_ShouldReturnEqual()
+        {
+            double inchValue1 = this.quantityMeasurement.GetValueAndUnit(0.0, UnitType.Units.INCH);
+            double inchValue2 = this.quantityMeasurement.GetValueAndUnit(0.0, UnitType.Units.INCH);
+            Assert.AreEqual(inchValue1, inchValue2);
+        }
     }
 }

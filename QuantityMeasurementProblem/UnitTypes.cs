@@ -15,6 +15,7 @@ namespace QuantityMeasurementProblem
         public enum Units
         {
             FEET,
+            INCH,
         }
 
         /// <summary>
@@ -27,6 +28,11 @@ namespace QuantityMeasurementProblem
             if (unitsType == Units.FEET)
             {
                 return 12.0;
+            }
+
+            if (unitsType == Units.INCH)
+            {
+                return 1.0;
             }
 
             return 0.0;
