@@ -309,7 +309,7 @@ namespace QuantityMeasurementProblemTest
         }
 
         /// <summary>
-        /// Test 1.1: Check 1 gallon & 3.78 litres equal.
+        /// Test 5.1: Check 1 gallon & 3.78 litres equal.
         /// </summary>
         [Test]
         public void GivenOneGallonAndThreeptSevenEightLiters_WhenEqual_ShouldReturnEqual()
@@ -320,7 +320,7 @@ namespace QuantityMeasurementProblemTest
         }
 
         /// <summary>
-        /// Test 1.1:  Check 1 litre & 1000 ml equal.
+        /// Test 5.2:  Check 1 litre & 1000 ml equal.
         /// </summary>
         [Test]
         public void GivenOneLitreAndThousandMiliLitre_WhenEqual_ShouldReturnEqual()
@@ -328,6 +328,17 @@ namespace QuantityMeasurementProblemTest
             double valueOne = this.quantityMeasurement.GetValueAndUnit(1.0, UnitType.Units.LITRE);
             double valueTwo = this.quantityMeasurement.GetValueAndUnit(1000.0, UnitType.Units.ML);
             Assert.AreEqual(valueOne, valueTwo);
+        }
+
+        /// <summary>
+        /// Test 4.4: Addition of 1 gallon & 3.78 Litres values.
+        /// </summary>
+        [Test]
+        public void GivenOneGallonAndLitre_WhenAdded_ShouldReturnCorrectResult()
+        {
+            double valueOne = this.quantityMeasurement2.GetValueAndUnit(1.0, UnitType.Units.GALLON);
+            double valueTwo = this.quantityMeasurement2.GetValueAndUnit(3.78, UnitType.Units.LITRE);
+            Assert.AreEqual(valueOne + valueTwo, 7.57);
         }
     }
 }
