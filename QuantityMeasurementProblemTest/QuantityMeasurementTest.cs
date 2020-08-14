@@ -254,7 +254,7 @@ namespace QuantityMeasurementProblemTest
         }
 
         /// <summary>
-        /// Test 1.17: check equality for values of Two inch to five centimeter.
+        /// Test 3.1: check equality for values of Two inch to five centimeter.
         /// </summary>
         [Test]
         public void GivenTwoInchAndFiveCMValueCheck_WhenEqual_ShouldReturnEqual()
@@ -262,6 +262,17 @@ namespace QuantityMeasurementProblemTest
             double value1 = this.quantityMeasurement2.GetValueAndUnit(2.0, UnitType.Units.INCH);
             double value2 = this.quantityMeasurement2.GetValueAndUnit(5.0, UnitType.Units.CM);
             Assert.AreEqual(value1, value2);
+        }
+
+        /// <summary>
+        /// Test 4.1: add values.
+        /// </summary>
+        [Test]
+        public void GivenTwoInchAndTwoInch_WhenAdded_ShouldReturnCorrectResult()
+        {
+            double valueOne = this.quantityMeasurement2.GetValueAndUnit(2.0, UnitType.Units.INCH);
+            double valueTwo = this.quantityMeasurement2.GetValueAndUnit(2.0, UnitType.Units.INCH);
+            Assert.AreEqual(valueOne + valueTwo, 4);
         }
     }
 }
