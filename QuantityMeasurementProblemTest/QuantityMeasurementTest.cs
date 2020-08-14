@@ -38,5 +38,14 @@ namespace QuantityMeasurementProblemTest
             double value2 = this.quantityMeasurement.GetValueAndUnit(0.0, UnitType.Units.FEET);
             Assert.AreEqual(value1, value2);
         }
+
+        /// <summary>
+        /// Test 1.2: check equality for null values.
+        /// </summary>
+        [Test]
+        public void GivenTwoNullFeetValue_WhenNotProper_ShouldReturnFalse()
+        {
+            Assert.IsFalse(this.quantityMeasurement.Equals(null));
+        }
     }
 }
