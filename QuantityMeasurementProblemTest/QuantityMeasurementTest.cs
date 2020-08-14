@@ -285,5 +285,16 @@ namespace QuantityMeasurementProblemTest
             double valueTwo = this.quantityMeasurement2.GetValueAndUnit(2.0, UnitType.Units.INCH);
             Assert.AreEqual(valueOne + valueTwo, 14);
         }
+
+        /// <summary>
+        /// Test 4.3: Addtion of 1 feet & 1 feet values.
+        /// </summary>
+        [Test]
+        public void GivenOneFeetAndOneFeet_WhenAdded_ShouldReturnCorrectResult()
+        {
+            double valueOne = this.quantityMeasurement2.GetValueAndUnit(1.0, UnitType.Units.FEET);
+            double valueTwo = this.quantityMeasurement2.GetValueAndUnit(1.0, UnitType.Units.FEET);
+            Assert.AreEqual(valueOne + valueTwo, 24);
+        }
     }
 }
