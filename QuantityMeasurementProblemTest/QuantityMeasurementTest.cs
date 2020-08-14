@@ -164,5 +164,16 @@ namespace QuantityMeasurementProblemTest
             double value2 = this.quantityMeasurement2.GetValueAndUnit(1.0, UnitType.Units.FEET);
             Assert.AreNotEqual(value1, value2);
         }
+
+        /// <summary>
+        /// Test 1.15: check equality for values of 1 Feet & 12 Inch.
+        /// </summary>
+        [Test]
+        public void GivenOneFeetandTwelveInchValueCheck_WhenEqual_ShouldReturnEqual()
+        {
+            double value1 = this.quantityMeasurement.GetValueAndUnit(1.0, UnitType.Units.FEET);
+            double value2 = this.quantityMeasurement.GetValueAndUnit(12.0, UnitType.Units.INCH);
+            Assert.AreEqual(value1, value2);
+        }
     }
 }
