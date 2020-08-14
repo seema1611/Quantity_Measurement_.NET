@@ -265,7 +265,7 @@ namespace QuantityMeasurementProblemTest
         }
 
         /// <summary>
-        /// Test 4.1: add values.
+        /// Test 4.1: Addition of 2 Inche & 2 Inch values.
         /// </summary>
         [Test]
         public void GivenTwoInchAndTwoInch_WhenAdded_ShouldReturnCorrectResult()
@@ -273,6 +273,17 @@ namespace QuantityMeasurementProblemTest
             double valueOne = this.quantityMeasurement2.GetValueAndUnit(2.0, UnitType.Units.INCH);
             double valueTwo = this.quantityMeasurement2.GetValueAndUnit(2.0, UnitType.Units.INCH);
             Assert.AreEqual(valueOne + valueTwo, 4);
+        }
+
+        /// <summary>
+        /// Test 4.2: Addtion of 1 feet & 2 Inches values.
+        /// </summary>
+        [Test]
+        public void GivenOneFeetAndTwoInch_WhenAdded_ShouldReturnCorrectResult()
+        {
+            double valueOne = this.quantityMeasurement2.GetValueAndUnit(1.0, UnitType.Units.FEET);
+            double valueTwo = this.quantityMeasurement2.GetValueAndUnit(2.0, UnitType.Units.INCH);
+            Assert.AreEqual(valueOne + valueTwo, 14);
         }
     }
 }
