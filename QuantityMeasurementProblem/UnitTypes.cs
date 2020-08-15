@@ -24,6 +24,8 @@ namespace QuantityMeasurementProblem
             KG,
             GRAM,
             TONNE,
+            CELSIUS,
+            FAHRENHEIT
         }
 
         /// <summary>
@@ -46,15 +48,19 @@ namespace QuantityMeasurementProblem
                 case Units.GALLON:
                     return 3.78;
                 case Units.LITRE:
-                    return 1;
+                    return 1.0;
                 case Units.ML:
                     return 0.001;
                 case Units.KG:
-                    return 1;
+                    return 1.0;
                 case Units.GRAM:
                     return 0.001;
                 case Units.TONNE:
                     return 1000;
+                case Units.CELSIUS:
+                    return 1;
+                case Units.FAHRENHEIT:
+                    return 1;
             }
             return 0.0;
         }

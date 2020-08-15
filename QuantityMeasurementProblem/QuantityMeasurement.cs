@@ -15,6 +15,19 @@ namespace QuantityMeasurementProblem
         private UnitType unitsType = new UnitType();
 
         /// <summary>
+        /// This method use for tempreture conversion.
+        /// </summary>
+        /// <param name="unit">Unit type.</param>
+        /// <param name="temperature">Temperature quantity.</param>
+        /// <returns>Temperature value.</returns>
+        public double TemperatureConversion(double temperature, Units unit)
+        {
+            if (unit == Units.FAHRENHEIT)
+                return (temperature - 32) * 5/9;
+            return temperature;
+        }
+
+        /// <summary>
         /// Method to get double values.
         /// </summary>
         /// <param name="value">Perform operation.</param>
@@ -57,7 +70,7 @@ namespace QuantityMeasurementProblem
         /// <returns>hascode.</returns>
         public override int GetHashCode()
         {
-            return base.GetHashCode();
+            return -1136221603 +  base.GetHashCode();
         }
     }
 }
