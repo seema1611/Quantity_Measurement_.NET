@@ -24,41 +24,23 @@ namespace QuantityMeasurementProblem
         /// <returns>double value.</returns>
         public double GetconvertedUnit(Units unitsType)
         {
-            if (unitsType == Units.FEET)
+            switch (unitsType)
             {
-                return 12.0;
+                case Units.FEET:
+                    return 12.0;
+                case Units.INCH:
+                    return 1.0;
+                case Units.YARD:
+                    return 36.0;
+                case Units.CM:
+                    return 0.4;
+                case Units.GALLON:
+                    return 3.78;
+                case Units.LITRE:
+                    return 1;
+                case Units.ML:
+                    return 0.001;
             }
-
-            if (unitsType == Units.INCH)
-            {
-                return 1.0;
-            }
-
-            if (unitsType == Units.YARD)
-            {
-                return 36.0;
-            }
-
-            if (unitsType == Units.CM)
-            {
-                return 1 / 2.5;
-            }
-
-            if (unitsType == Units.LITRE)
-            {
-                return 1 * 1000.0;
-            }
-
-            if (unitsType == Units.GALLON)
-            {
-                return 1 * 3780.0;
-            }
-
-            if (unitsType == Units.ML)
-            {
-                return 1.0;
-            }
-
             return 0.0;
         }
     }

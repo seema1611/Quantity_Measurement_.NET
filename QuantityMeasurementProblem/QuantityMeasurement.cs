@@ -4,6 +4,7 @@
 
 namespace QuantityMeasurementProblem
 {
+    using System;
     using static QuantityMeasurementProblem.UnitType;
 
     /// <summary>

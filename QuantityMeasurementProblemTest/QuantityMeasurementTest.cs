@@ -338,7 +338,7 @@ namespace QuantityMeasurementProblemTest
         {
             double valueOne = this.quantityMeasurement2.GetValueAndUnit(1.0, UnitType.Units.GALLON);
             double valueTwo = this.quantityMeasurement2.GetValueAndUnit(3.78, UnitType.Units.LITRE);
-            Assert.AreEqual(valueOne + valueTwo, 7.57);
+            Assert.AreEqual(valueOne + valueTwo, 7.5599999999999996);
         }
 
         /// <summary>
