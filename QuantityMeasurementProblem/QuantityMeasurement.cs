@@ -24,7 +24,7 @@ namespace QuantityMeasurementProblem
         {
             if (unit == Units.FAHRENHEIT)
                 return (temperature - 32) * 5/9;
-            return temperature;
+            return (temperature * 9/5) +32;
         }
 
         /// <summary>

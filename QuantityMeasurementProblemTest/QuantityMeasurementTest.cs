@@ -396,5 +396,17 @@ namespace QuantityMeasurementProblemTest
             double valueTwo = this.quantityMeasurement.GetValueAndUnit(100.0, UnitType.Units.CELSIUS);
             Assert.AreEqual(valueOne , valueTwo);
         }
+
+        /// <summary>
+        /// Test 8.2: check equality for values of 100 Celsius and 212 Fahrenheit.
+        /// </summary>
+        [Test]
+        public void GivenThousandCelsiusTwoOneTwoFahrenheit_WhenEqual_ShouldReturnEqual()
+        {
+            double temperature = quantityMeasurement.TemperatureConversion(100.0, UnitType.Units.CELSIUS);
+            double valueOne = this.quantityMeasurement.GetValueAndUnit(212.0, UnitType.Units.FAHRENHEIT);
+            double valueTwo = this.quantityMeasurement.GetValueAndUnit(temperature, UnitType.Units.CELSIUS);
+            Assert.AreEqual(valueOne, valueTwo);
+        }
     }
 }
