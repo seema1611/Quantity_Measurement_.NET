@@ -14,7 +14,16 @@ namespace QuantityMeasurementProblem
         /// </summary>
         public enum Units
         {
-            FEET,INCH,YARD,CM, GALLON,LITRE,ML,
+            FEET,
+            INCH,
+            YARD,
+            CM,
+            GALLON,
+            LITRE,
+            ML,
+            KG,
+            GRAM,
+            TONNE,
         }
 
         /// <summary>
@@ -40,6 +49,12 @@ namespace QuantityMeasurementProblem
                     return 1;
                 case Units.ML:
                     return 0.001;
+                case Units.KG:
+                    return 1;
+                case Units.GRAM:
+                    return 0.001;
+                case Units.TONNE:
+                    return 1000;
             }
             return 0.0;
         }
