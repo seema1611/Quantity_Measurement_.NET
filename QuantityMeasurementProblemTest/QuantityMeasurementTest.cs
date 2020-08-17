@@ -272,7 +272,8 @@ namespace QuantityMeasurementProblemTest
         {
             double valueOne = this.quantityMeasurement.GetValueAndUnit(2.0, UnitType.Units.INCH);
             double valueTwo = this.quantityMeasurement.GetValueAndUnit(2.0, UnitType.Units.INCH);
-            Assert.AreEqual(valueOne + valueTwo, 4);
+            double addition = this.quantityMeasurement.GetAddition(valueOne, valueTwo);
+            Assert.AreEqual(4, addition);
         }
 
         /// <summary>
@@ -283,7 +284,8 @@ namespace QuantityMeasurementProblemTest
         {
             double valueOne = this.quantityMeasurement.GetValueAndUnit(1.0, UnitType.Units.FEET);
             double valueTwo = this.quantityMeasurement.GetValueAndUnit(2.0, UnitType.Units.INCH);
-            Assert.AreEqual(valueOne + valueTwo, 14);
+            double addition = this.quantityMeasurement.GetAddition(valueOne, valueTwo);
+            Assert.AreEqual(14, addition);
         }
 
         /// <summary>
@@ -294,7 +296,8 @@ namespace QuantityMeasurementProblemTest
         {
             double valueOne = this.quantityMeasurement.GetValueAndUnit(1.0, UnitType.Units.FEET);
             double valueTwo = this.quantityMeasurement.GetValueAndUnit(1.0, UnitType.Units.FEET);
-            Assert.AreEqual(valueOne + valueTwo, 24);
+            double addition = this.quantityMeasurement.GetAddition(valueOne, valueTwo);
+            Assert.AreEqual(24, addition);
         }
 
         /// <summary>
@@ -305,7 +308,8 @@ namespace QuantityMeasurementProblemTest
         {
             double valueOne = this.quantityMeasurement.GetValueAndUnit(2.0, UnitType.Units.INCH);
             double valueTwo = this.quantityMeasurement.GetValueAndUnit(2.5, UnitType.Units.CM);
-            Assert.AreEqual(valueOne + valueTwo, 3);
+            double addition = this.quantityMeasurement.GetAddition(valueOne, valueTwo);
+            Assert.AreEqual(3, addition);
         }
 
         /// <summary>
@@ -338,7 +342,8 @@ namespace QuantityMeasurementProblemTest
         {
             double valueOne = this.quantityMeasurement.GetValueAndUnit(1.0, UnitType.Units.GALLON);
             double valueTwo = this.quantityMeasurement.GetValueAndUnit(3.78, UnitType.Units.LITRE);
-            Assert.AreEqual(valueOne + valueTwo, 7.5599999999999996);
+            double addition = this.quantityMeasurement.GetAddition(valueOne, valueTwo);
+            Assert.AreEqual(7.5599999999999996, addition);
         }
 
         /// <summary>
@@ -349,7 +354,8 @@ namespace QuantityMeasurementProblemTest
         {
             double valueOne = this.quantityMeasurement.GetValueAndUnit(1.0, UnitType.Units.LITRE);
             double valueTwo = this.quantityMeasurement.GetValueAndUnit(1000.0, UnitType.Units.ML);
-            Assert.AreEqual(valueOne + valueTwo, 2);
+            double addition = this.quantityMeasurement.GetAddition(valueOne, valueTwo);
+            Assert.AreEqual(2, addition);
         }
 
         /// <summary>
@@ -382,7 +388,8 @@ namespace QuantityMeasurementProblemTest
         {
             double valueOne = this.quantityMeasurement.GetValueAndUnit(1.0, UnitType.Units.TONNE);
             double valueTwo = this.quantityMeasurement.GetValueAndUnit(1000.0, UnitType.Units.GRAM);
-            Assert.AreEqual(valueOne+valueTwo, 1001.0);
+            double addition = this.quantityMeasurement.GetAddition(valueOne, valueTwo);
+            Assert.AreEqual(1001.0, addition);
         }
 
         /// <summary>
@@ -391,7 +398,7 @@ namespace QuantityMeasurementProblemTest
         [Test]
         public void GivenTwoOneTwoFahrenheitAndThousandCelsius_WhenEqual_ShouldReturnEqual()
         {
-            double temperature = quantityMeasurement.TemperatureConversion(212.0, UnitType.Units.FAHRENHEIT);
+            double temperature = quantityMeasurement.GetTemperatureConversion(212.0, UnitType.Units.FAHRENHEIT);
             double valueOne = this.quantityMeasurement.GetValueAndUnit(temperature, UnitType.Units.FAHRENHEIT);
             double valueTwo = this.quantityMeasurement.GetValueAndUnit(100.0, UnitType.Units.CELSIUS);
             Assert.AreEqual(valueOne , valueTwo);
@@ -403,7 +410,7 @@ namespace QuantityMeasurementProblemTest
         [Test]
         public void GivenThousandCelsiusTwoOneTwoFahrenheit_WhenEqual_ShouldReturnEqual()
         {
-            double temperature = quantityMeasurement.TemperatureConversion(100.0, UnitType.Units.CELSIUS);
+            double temperature = quantityMeasurement.GetTemperatureConversion(100.0, UnitType.Units.CELSIUS);
             double valueOne = this.quantityMeasurement.GetValueAndUnit(212.0, UnitType.Units.FAHRENHEIT);
             double valueTwo = this.quantityMeasurement.GetValueAndUnit(temperature, UnitType.Units.CELSIUS);
             Assert.AreEqual(valueOne, valueTwo);

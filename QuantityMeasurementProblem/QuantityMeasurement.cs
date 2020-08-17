@@ -15,12 +15,23 @@ namespace QuantityMeasurementProblem
         private UnitType unitsType = new UnitType();
 
         /// <summary>
+        /// This method use for addition.
+        /// </summary>
+        /// <param name="valueOne">First value</param>
+        /// <param name="valueTwo">second Value</param>
+        /// <returns>Addition value</returns>
+        public double GetAddition(double valueOne, double valueTwo)
+        {
+            return valueOne + valueTwo;
+        }
+
+        /// <summary>
         /// This method use for tempreture conversion.
         /// </summary>
         /// <param name="unit">Unit type.</param>
         /// <param name="temperature">Temperature quantity.</param>
         /// <returns>Temperature value.</returns>
-        public double TemperatureConversion(double temperature, Units unit)
+        public double GetTemperatureConversion(double temperature, Units unit)
         {
             if (unit == Units.FAHRENHEIT)
                 return (temperature - 32) * 5/9;
@@ -33,7 +44,6 @@ namespace QuantityMeasurementProblem
         /// <param name="value">Perform operation.</param>
         /// <param name="unitsType">taking unit.</param>
         /// <returns>value converted.</returns>
-        /// 
         public double GetValueAndUnit(double value, Units unitsType)
         {
             return value * this.unitsType.GetconvertedUnit(unitsType);
